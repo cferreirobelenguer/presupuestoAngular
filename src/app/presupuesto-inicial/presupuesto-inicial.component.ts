@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { presupuestoData } from '../interface/interfacePresupuesto';
+import { listadoData } from '../interface/listado.interface';
 
 @Component({
   selector: 'app-presupuesto-inicial',
@@ -10,7 +11,9 @@ export class PresupuestoInicialComponent {
   public show:boolean
   public botonActivado:boolean
   public presup:presupuestoData
+  public list:listadoData[]=[]
   constructor(){
+
     this.show=false
     this.botonActivado=false
     this.presup={

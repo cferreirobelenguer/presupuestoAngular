@@ -1,14 +1,39 @@
+/*Estilos del componente lista-gatos*/
 #listado_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    gap:30px
+}
+.gastos_listado{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    gap:20px
 }
-.gastos_listado{
+.gastos_presupuesto_restante{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap:20px
 }
+.gastos_listaDatos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:20px
+}
+
+.gasto{
+    background-color: white;
+    color:rgb(34, 34, 35);
+    border-radius: 30px;
+    padding: 10px 30px 10px 30px;
+}
+

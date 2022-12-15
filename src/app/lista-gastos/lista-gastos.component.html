@@ -1,8 +1,12 @@
 <section class="mt-4 p-5 bg-dark text-white rounded" id="listado_container">
-    <div class="gastos_title">
-        <p class="h1 .text-muted">GASTOS</p>
-    </div>
     <div class="agregarListado">
+        <div class="gastos_title">
+            <p class="h1 .text-muted">GASTOS</p>
+        </div>
+        <div>
+            <!--Este h5 se muestra si el presupuesto es menor que 0-->
+            <p *ngIf="this.listadoDatos.gasto>this.restante || this.listadoDatos.gasto===0" [ngStyle]="{'color':'red'}">Nombre gasto o cantidad incorrecta</p>
+        </div>
         <div class="agregarListado_input p-2">
             <input #compra [(ngModel)]="listadoDatos.compra" required placeholder="Introduce gasto"/>
         </div>
@@ -14,11 +18,21 @@
         </div>
     </div>
     <div class="gastos_listado">
-        <div>
-            <h5>Presupuesto: ${{this.presup.presu}}</h5>
+        <div class="gastos_presupuesto_restante">
+            <div>
+                <h5>Presupuesto: ${{this.presup.presu}}</h5>
+            </div>
+            <div>
+                <h5>Restante: ${{this.restante}}</h5>
+            </div>
         </div>
-        <div>
-            <h5>Restante: ${{this.restante}}</h5>
+        <div class="gastos_listaDatos" *ngFor="let datos of this.list">
+            <div class="compra">
+                {{datos.compra}}
+            </div>
+            <div class="gasto">
+                {{datos.gasto}}
+            </div>
         </div>
     </div>
 </section>
