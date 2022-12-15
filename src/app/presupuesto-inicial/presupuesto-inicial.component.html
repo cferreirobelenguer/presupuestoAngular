@@ -1,0 +1,21 @@
+<section id="presupuesto_container" class="mt-4 p-5 bg-dark text-white rounded" *ngIf="this.show===false">
+    <div class="presupuesto_title">
+        <p class="h1 .text-muted">INGRESE PRESUPUESTO</p>
+    </div>
+    <div class="presupuesto_input p-3">
+        <!--Este h5 se muestra si el presupuesto es menor que 0-->
+        <h5 *ngIf="this.presup.presu <0" [ngStyle]="{'color':'red'}">EL PRESUPUESTO DEBE SER MAYOR QUE O</h5>
+        <input class="inputStyle" type="number" required placeholder="Ingrese presupuesto" #presupuesto [(ngModel)]="presup.presu"/>
+    </div>
+    <div class="presupuesto_button p-3">
+        <!--se envían los datos del presupuesto inicial-->
+        <button class="btn btn-light" (click)="enviarDatos()">ACEPTAR</button>
+    </div>
+</section>
+<!-- Si botonActivado, show es true y el presupuesto es mayor que 0 se llama al componente lista gastos-->
+<div *ngIf="this.botonActivado===true && this.presup.presu>0 && this.show===true">
+    <app-lista-gastos [presup]="presup" ></app-lista-gastos>
+    <!-- Si se pulsa volver se vuelve a la vista de ingrese presupuesto-->
+    <button (click)="volverInicio()" class="btn btn-dark p-2 m-2">Volver</button>
+
+</div>

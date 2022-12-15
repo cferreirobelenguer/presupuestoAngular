@@ -1,0 +1,24 @@
+<section class="mt-4 p-5 bg-dark text-white rounded" id="listado_container">
+    <div class="gastos_title">
+        <p class="h1 .text-muted">GASTOS</p>
+    </div>
+    <div class="agregarListado">
+        <div class="agregarListado_input p-2">
+            <input #compra [(ngModel)]="listadoDatos.compra" required placeholder="Introduce gasto"/>
+        </div>
+        <div class="agregarListado_input p-2">
+            <input #gasto [(ngModel)]="listadoDatos.gasto" required placeholder="Introduce cantidad"/>
+        </div>
+        <div class="agregarListado_boton p-3">
+            <button (click)="dataSend()" class="btn btn-light p-3">AGREGAR DATOS</button>
+        </div>
+    </div>
+    <div class="gastos_listado">
+        <div>
+            <h5>Presupuesto: ${{this.presup.presu}}</h5>
+        </div>
+        <div>
+            <h5>Restante: ${{this.restante}}</h5>
+        </div>
+    </div>
+</section>
