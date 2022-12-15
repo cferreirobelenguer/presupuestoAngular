@@ -21,23 +21,17 @@ export class ListaGastosComponent implements OnInit, OnChanges{
   
   public restante:number=0
   constructor(){
-    
-    //la variable restante se inicializa con el valor del presupuesto inicial
-    
+
   }
 
   ngOnInit(): void {
-    console.log("Al pasar al componente lista gastos: "+this.presup.presu)
-    console.log(typeof(this.restante))
     console.log("Este es el restante: "+this.restante)
   }
   ngOnChanges(changes: SimpleChanges): void {
     //Actualiza los cambios del Input presup.presu que heredamos del componente presupuesto
     //Se resetea la lista al cambiar el presupuesto y vacía
-    console.log(changes)
     this.restante=this.presup.presu
     this.list=[]
-    console.log("restante de onchanges"+this.restante)
   }
   dataSend(){
     /* método que se ejecuta cuando se pulsa agregar datos
@@ -51,7 +45,6 @@ export class ListaGastosComponent implements OnInit, OnChanges{
     /* Si el gasto es menor o igual que el presupuesto inicial 
     se añade el gasto a la lista de gastos que es la variable list */
     if(this.listadoDatos.gasto<=this.restante && this.listadoDatos.gasto!=0){
-      console.log("Es mas alto que el presupuesto")
       
       //this.listaCompras.push(this.listadoDatos.compra)
       this.list.push({
@@ -64,7 +57,7 @@ export class ListaGastosComponent implements OnInit, OnChanges{
       if(this.restante!==0){
         this.restante-=this.listadoDatos.gasto
     }
-      console.log(this.list)
+    
     }
     
     
