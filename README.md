@@ -20,7 +20,7 @@
 
 ### Vista de agregar datos de compra una vez elegido el presupuesto inicial
 ![image](https://user-images.githubusercontent.com/88061350/207913221-b52e6915-810f-4297-847d-7b71a16ba137.png)
-### No puede el gasto ser mayor que el saldo restante o menor
+### No puede el gasto ser mayor que el saldo restante
 ![image](https://user-images.githubusercontent.com/88061350/207913775-0058040b-32f4-4d41-972b-b649181bdef6.png)
 ## RESPONSIVE
 ### Vista inicial en la que el usuario tiene que elegir el presupuesto inicial
@@ -30,5 +30,5 @@
 
 ### Vista de agregar datos de compra una vez elegido el presupuesto inicial
 ![image](https://user-images.githubusercontent.com/88061350/207913147-854015d2-b073-40c1-a091-704a47806f4e.png)
-### No puede el gasto ser mayor que el saldo restante o menor
+### No puede el gasto ser mayor que el saldo restante
 ![image](https://user-images.githubusercontent.com/88061350/207913699-ee2ee021-e502-4d99-a744-9132b7c9fcf4.png)
